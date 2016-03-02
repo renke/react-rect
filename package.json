@@ -56,12 +56,14 @@
     "check": "eslint src test",
     "generate": "yo @renke/node-lib",
     "prepublish": "npm run --production build && npm run --production build:example",
+    "postpublish": "npm run deploy:example",
     "start:example": "babel-node server.js",
     "test": "mocha --compilers js:babel-register",
     "watch:build": "babel src --out-dir lib --watch",
     "watch:build:example": "webpack --watch",
     "watch:check": "watch \"npm run check --silent\"",
-    "watch:test": "mocha --compilers js:babel-register --watch"
+    "watch:test": "mocha --compilers js:babel-register --watch",
+    "deploy:example": "./scripts/deploy.sh -c ./scripts/deploy.env"
   },
   "version": "0.0.1"
 }
