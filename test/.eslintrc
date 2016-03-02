@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "../.eslintrc",
+    "renke/config/mocha"
+  ]
+}
