@@ -3,7 +3,7 @@ import ElementResizeDetector from "element-resize-detector";
 import React, {Component} from "react";
 import {findDOMNode} from "react-dom";
 
-const defaults = {
+const defaultOptions = {
   propKey: "rect",
   defaultRect: {width: 0, height: 0},
   computeRect: defaultComputeRect,
@@ -18,7 +18,9 @@ function defaultComputeRect(node) {
   return {width, height};
 }
 
-export default function Rect({propKey, defaultRect, computeRect} = defaults) {
+export default function Rect(options) {
+  const {propKey, defaultRect, computeRect} = {...defaultOptions, ...options};
+
   return InnerComponent => class extends Component {
     static displayName = "Rect";
 
