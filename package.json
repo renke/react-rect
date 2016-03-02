@@ -48,7 +48,7 @@
     "react": "^0",
     "react-dom": "^0"
   },
-  "private": true,
+  "private": false,
   "repository": "renke/react-rect",
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -63,5 +63,5 @@
     "watch:check": "watch \"npm run check --silent\"",
     "watch:test": "mocha --compilers js:babel-register --watch"
   },
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
