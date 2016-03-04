@@ -36,9 +36,14 @@ export default function Rect(options) {
 
     setTarget = target => {
       if (target) {
+        if (this.node) {
+          this.elementResizeDetector.removeAllListeners(this.node);
+        }
+
         this.node = findDOMNode(target);
+        this.handleResize(this.node);
         this.elementResizeDetector.listenTo(this.node, this.handleResize);
-      } else {
+      } else if (this.node) {
         this.elementResizeDetector.removeAllListeners(this.node);
         this.node = null;
         this.setState({rect: defaultRect});
