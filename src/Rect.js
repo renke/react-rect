@@ -42,6 +42,7 @@ export default function Rect(options) {
 
         this.node = findDOMNode(target);
         this.handleResize(this.node);
+
         this.elementResizeDetector.listenTo(this.node, this.handleResize);
       } else if (this.node) {
         this.elementResizeDetector.removeAllListeners(this.node);

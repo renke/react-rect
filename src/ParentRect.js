@@ -12,7 +12,16 @@ export default function ParentRect(...options) {
 
       componentDidMount() {
         const node = findDOMNode(this);
+
+        if (!node) {
+          return;
+        }
+
         this.props.setTarget(node.parentNode);
+      }
+
+      componentDidUpdate() {
+        this.componentDidMount();
       }
 
       componentWillUnmount() {
