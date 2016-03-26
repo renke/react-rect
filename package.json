@@ -65,5 +65,5 @@
     "watch:test": "mocha --compilers js:babel-register --watch",
     "deploy:example": "./scripts/deploy.sh -c ./scripts/deploy.env"
   },
-  "version": "0.0.4"
+  "version": "0.1.0"
 }
