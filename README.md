@@ -1,3 +1,5 @@
+__ATTENTION: This repository is currently unmaintained.__
+
 # react-rect
 
 Inject a component's width and height as props.
